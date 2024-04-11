@@ -20,3 +20,4 @@ runs:
     - ${{ inputs.tutor_version }}
     - ${{ inputs.edunext_plugin }}
     - ${{ inputs.edunext_plugin_folder }}
+    - ${{ inputs.plugin_branch_name }}
