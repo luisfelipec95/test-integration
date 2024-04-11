@@ -1,0 +1,22 @@
+name: 'Integration Tests'
+description: 'Run integration tests with Tutor for a specified plugin'
+inputs:
+  tutor_version:
+    description: 'Version of Tutor to use for the integration tests'
+    required: true
+  edunext_plugin:
+    description: 'Plugin to test integration with'
+    required: true
+  edunext_plugin_folder:
+    description: 'Plugin folder to test integration with'
+    required: true
+  plugin_branch_name: 
+    description: 'Plugin branch name to test integration with'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.tutor_version }}
+    - ${{ inputs.edunext_plugin }}
+    - ${{ inputs.edunext_plugin_folder }}
