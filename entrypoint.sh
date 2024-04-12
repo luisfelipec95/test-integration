@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "se va testear el plugin "
-echo "$edunext_plugin"
+echo "$inputs.edunext_plugin"
