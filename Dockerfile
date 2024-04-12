@@ -18,7 +18,9 @@ RUN pip install -e ".[full]"
 
 # Definir el directorio de trabajo y copiar el código de la acción
 WORKDIR /github/workspace
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 COPY . .
 
 # Ejecutar el comando principal de la acción
-ENTRYPOINT ["/github/workspace/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
