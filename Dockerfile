@@ -3,8 +3,6 @@ FROM python:3.8
 # Instalar dependencias necesarias
 RUN pip install virtualenv
 
-COPY entrypoint.sh /entrypoint.sh
-
 # Crear y activar un entorno virtual
 RUN virtualenv /venv
 ENV PATH="/venv/bin:$PATH"
@@ -23,4 +21,4 @@ WORKDIR /github/workspace
 COPY . .
 
 # Ejecutar el comando principal de la acción
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/github/workspace/entrypoint.sh"]
