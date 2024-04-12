@@ -21,4 +21,4 @@ WORKDIR /github/workspace
 COPY . .
 
 # Ejecutar el comando principal de la acción
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
