@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "se va testear el plugin "
-echo "edunext ${inputs.edunext_plugin}"
+print(os.getenv('INPUT_edunext_plugin'))
