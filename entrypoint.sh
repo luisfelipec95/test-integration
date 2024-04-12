@@ -1,4 +1,14 @@
 #!/bin/bash
 
-echo "se va testear el plugin "
-echo "$inputs.edunext_plugin"
+set -euo pipefail
+
+bash --version
+
+for a in "${@}"; do
+  arg=$(echo "$a" | tr '\n' ' ' | xargs echo | sed "s/'//g"| sed "s/’//g")
+  sanitizedArgs+=("$arg")
+done
+
+echo "${sanitizedArgs[@]}"
+
+exit $?
